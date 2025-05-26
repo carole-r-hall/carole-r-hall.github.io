@@ -13,7 +13,7 @@ Some of Kendall's most prominent works include his contributions to the understa
 # Shape spaces 
 I feel a good start to understanding shape in a mathematical way is to start with Kendall's framework (and any of my own personal interest in Kendall's life is mere coincidence...). I find that Kendall's formalization of shapes is intuitive even to the not-mathematically-inclined. We can think of a shape as a form or outline of an object--try to imaging the outline of a bird (an Antarctic petrel to be exact), for example:
 
-![Antarctic Petrel](antarctic_petrel.jpg)
+![Antarctic Petrel](antarctic_petrel.JPG)
 
 ![Antarctic Petrel Mask](antarctic_petrel_mask.png)
 
