@@ -1,5 +1,1 @@
-Here you can say lots of fun things about your site.
-
-Maybe say a some things about yourself.
-
-Or maybe what you plan to blog about.
+Hi there! My name's Carole. I'm a PhD candidate in applied mathematics. I specialize in shape analysis, and I try my best to apply what I've learned to environmental data. Here's my blog on what I've enjoyed doing throughout my PhD. Hopefully you'll find something of use in here! 
