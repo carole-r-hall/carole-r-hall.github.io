@@ -172,6 +172,18 @@ $$
 
 And **Kendall's shape space** is this _quotient space_. Each point in the space represents an equivalence class of configurations differing only by rotation (and therefore the configurations within the same equivalence class are the _same_ shape in this space).
 
+How do we implement this rotational invariance into our Python code, you ask? We need to use something called **Procrustes alignment**&mdash;this is a procedure we use to find the optimal rotation for a (centered and scaled) input shape (_pre-shape_) $\boldsymbol{X}\in\mathbb{R}^{k\times{d}}$ to align well with a (centered and scaled) reference shape $\boldsymbol{Y}\in\mathbb{R}^{k\times{d}}$. That is, we want to find the rotation matrix $R$ such that 
+
+$$
+\boldsymbol{X}R \approx \boldsymbol{Y}
+$$
+
+So we wish to solve 
+
+$$
+\min_{R\in{O}_d\Vert\boldsymbol{X}R - \boldsymbol{Y}\Vert_F^2
+$$
+
 ### Quick note about landmarks versus shapes
 
 For people used to coordinates meaning a point in Euclidean space, it can be pretty confusing when we use the term _point_ to refer to a configuration in shape or pre-shape space. In our notation, a point $\boldsymbol{X}\in\Sigma_k^d$ is a configuration of coordinates, so $\boldsymbol{X} = \left(x_1, x_2, ..., x_d)\right)$, where each $x_i$ is the more familiar coordinate. $\boldsymbol{X}$ is very explicitly a $k\times{d}$ matrix, containing $k$ landmarks of dimension $d$. 
