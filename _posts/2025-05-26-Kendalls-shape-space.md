@@ -183,10 +183,10 @@ $$
 So we wish to solve 
 
 $$
-\min_{R\in{O}_d\Vert\boldsymbol{X}R - \boldsymbol{Y}\Vert_F^2
+\min_{R\in{O}_d}\Vert\boldsymbol{X}R - \boldsymbol{Y}\Vert_F^2
 $$
 
-[procrustes gif](/assets/procrustes_alignment.gif)
+![procrustes gif](/assets/procrustes_alignment.gif)
 
 ### Quick note about landmarks versus shapes
 
