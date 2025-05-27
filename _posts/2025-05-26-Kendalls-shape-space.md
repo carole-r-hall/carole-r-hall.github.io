@@ -125,11 +125,11 @@ $$
 \left( x_1, x_2, ..., x_k \right) \rightarrow \left( x_1 - \overline{\boldsymbol{X}}, x_2 - \overline{\boldsymbol{X}},..., x_k - \overline{\boldsymbol{X}} \right) \implies \boldsymbol{X} \rightarrow \boldsymbol{X} - \overline{\boldsymbol{X}}
 $$
 
-Where $\overline{\boldsymbol{X}}$ here is the centroid of the landmarks. Next, we achieve _scale invariance_ by forcing our configuration to have a unit size; we use the Frobenius norm $\|\boldsymbol{X}\|_F$ to do this:
+Where $\overline{\boldsymbol{X}}$ here is the centroid of the landmarks. Next, we achieve _scale invariance_ by forcing our configuration to have a unit size; we use the Frobenius norm $\Vert\boldsymbol{X}\Vert_F$ to do this:
 
 
 $$
-\left\| \boldsymbol{X} \right\|_F = \sqrt{ \sum_{i=1}^k \sum_{j=1}^m x_{ij}^2 }
+\left\Vert \boldsymbol{X} \right\Vert_F = \sqrt{ \sum_{i=1}^k \sum_{j=1}^m x_{ij}^2 }
 $$
 
 After our configuration of landmarks undergoes these transformations, we are left with a resulting **pre-shape**. Pre-shapes are stored in a pre-shape space, a high-dimensional sphere of the form
@@ -141,7 +141,7 @@ $$
 which contains centered configurations normalized by size but which still arne't yet invariant to rotation. **Shape space** is our resulting space once we make our configurations invariant to rotation. We can introduce some more math mumbo jumbo and say
 
 $$
-\boldsymbol{S}^{kd-d-1} = \left\{ \boldsymbol{X} \in \mathbb{R}_0^{k\times{d}} \mid \|\boldsymbol{X}\|_F = 1 \right\}
+\boldsymbol{S}^{kd-d-1} = \left\{ \boldsymbol{X} \in \mathbb{R}_0^{k\times{d}} \mid \Vert\boldsymbol{X}\Vert_F = 1 \right\}
 $$
 
 Where $\mathbb{R}_0^{k\times{d}}$ is the space of centered configurations (i.e., those with zero mean). We can call the pre-shape space a unit sphere embedded in the linear space of centered configurations. 
@@ -186,7 +186,7 @@ Specifically, this gives a vector in $T_X$ pointing toward $\boldsymbol{Y}$.
 And conversely, the **exponential map** gives us a way to map from the tangent space back to the pre-shape manifold: 
 
 $$
-\exp_X(\boldsymbol{V}) = \cos\left(\|\boldsymbol{V}\|\right)\boldsymbol{X} + \sin\left(\|\boldsymbol{V}\|\right)\frac{\boldsymbol{V}}{\|\boldsymbol{V}\|}
+\exp_X(\boldsymbol{V}) = \cos\left(\Vert\boldsymbol{V}\Vert\right)\boldsymbol{X} + \sin\left(\Vert\boldsymbol{V}\Vert\right)\frac{\boldsymbol{V}}{\Vert\boldsymbol{V}\Vert}
 $$
 
 And this maps a vector $\boldsymbol{V}\in T_X$ back to our manifold or pre-shape space. 
