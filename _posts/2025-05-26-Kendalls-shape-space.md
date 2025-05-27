@@ -19,3 +19,53 @@ I feel a good start to understanding shape in a mathematical way is to start wit
 
 ![Antarctic Petrel Outline](/assets/antarctic_petrel_outline.png)
 
+(If you're curious how to find this outline--or "extract contours"--in Python, I recommend [this blog post by Andrew Udell](https://towardsdatascience.com/background-removal-with-python-b61671d1508a/). I'll put the gist of it here): 
+
+```
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+# read in the image
+img = cv2.imread("antarctic_petrel.JPG")
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+# define canny edge detector + other procesing parameters
+blur = 15
+canny_low = 13
+canny_high = 59
+min_area = 0.0005
+max_area = 0.95
+dilate_iter = 10
+erode_iter = 10
+
+# canny edge detector
+contours, _ = cv2.findContours(edges, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
+image_area = img.shape[0] * img.shape[1]
+contour_info = [(c, cv2.contourArea(c.astype(np.int32))) for c in contours]
+contour_info = [(c, area) for c, area in contour_info if min_area * image_area < area < max_area * image_area]
+
+# create a mask and fill each detected contour; the region of interest is white and o.w. black
+mask = np.zeros(edges.shape, dtype=np.uint8)
+for c, _ in contour_info:
+    mask = cv2.fillConvexPoly(mask, c, 255)
+
+# smooth for better appearance
+mask = cv2.dilate(mask, None, iterations=dilate_iter)
+mask = cv2.erode(mask, None, iterations=erode_iter)
+mask = cv2.GaussianBlur(mask, (blur, blur), 0)
+
+# create an outline of the object of interest
+contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+outline = max(contours, key=cv2.contourArea)
+
+# this will create the outline of the bird on top of a blank/white canvas
+canvas = np.ones_like(mask) * 255 
+cv2.drawContours(canvas, [outline], -1, color=0, thickness=2)
+
+# plot the outline
+plt.imshow(canvas, cmap='gray')
+plt.title("Antarctic Petrel Outline")
+plt.axis("off")
+plt.show()
+```
