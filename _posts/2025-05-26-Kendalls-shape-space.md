@@ -142,4 +142,14 @@ which contains centered configurations normalized by size but which still arne't
 
 Before getting to shape spaces, let's take a look at how we can practically remove translation and size variations from our examplar bird shape using Python: 
 
+```
+# center the configuration
+centroid = np.mean(points, axis=0)
+centered = points - centroid
+
+# normalize the size
+fro_norm = np.linalg.norm(centered)
+pre_shape = centered / fro_norm
+```
+
 ![Pre-shape centered and scaled](/assets/pre_shape_antarctic_petrel.png)
