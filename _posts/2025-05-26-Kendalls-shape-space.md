@@ -155,3 +155,13 @@ pre_shape = centered / fro_norm
 and when we re-plot these points, we should get a shape that looks the same:
 
 ![Pre-shape centered and scaled](/assets/pre_shape_antarctic_petrel.png)
+
+## Shape space
+
+To make our configuration invariant to rotation, we take the quotient of the pre-shape space by the rotation group $SO(d)$:
+
+$$
+\Sigma_d^k = S^{kd - d - 1} / SO(d)
+$$
+
+And **Kendall's shape space** is this _quotient space_. Each point inb the space represents an equivalence class of configurations differing only by rotation (and therefore are the _same_ shape in this space).  
