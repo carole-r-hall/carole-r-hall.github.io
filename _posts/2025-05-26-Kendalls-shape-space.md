@@ -1,3 +1,8 @@
+---
+layout: default
+title: Kendall's shape space
+---
+
 # Kendall's shape space
 
 ## David G. Kendall - the man, the myth, the mathematician
