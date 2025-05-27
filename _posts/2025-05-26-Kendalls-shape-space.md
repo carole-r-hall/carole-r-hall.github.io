@@ -72,3 +72,13 @@ plt.show()
 It doesn't matter if we rotate the outline of our bird, it's still a bird (and very importantly, it's still the *same* bird), right? 
 
 ![Rotated Antarctic Petrel Outline](/assets/rotated_antarctic_petrel_outline.png)
+
+It'll also still be the same bird if it was shifted 5 centimeters to the right or 10 centimeters to the left, and (at least in our case here) it'll still be the same bird if it appeared twice as small or five times as large (perhaps you can think of us zooming in or out on the same bird, which gives it an appearance of larger or smaller due to perspective and not the bird becoming physically different). 
+
+You'll find in my blog some different perspectives on what makes a shape a _shape_. For now, we'll use Kendall's definition. Shape here is a **finite set of landmarks**, or a set of points that capture well the geometry of an object. Think of:
+
+- Corners of a leaf
+- Bones in a skull
+- Boundary nest locations in a colony of birds
+
+
