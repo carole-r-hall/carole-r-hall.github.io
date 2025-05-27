@@ -177,3 +177,4 @@ $\Sigma_k^k$ is a smooth Riemannian manifold. By this, we mean the space looks l
 
 I already mentioned that the pre-shape space $S^{kd-d-1}$ is a unit sphere (remember: this is the space of configurations that are invariant to translation and scaling but _not_ rotation). Even though we have our shape space $\Sigma_k^d$, the use of the pre-shape sphere can be very convenient&mdash;speficially, if we imagine the tangent space $\boldsymbol{T}_{\boldsymbol{X}}$ of our pre-shape sphere near the point (or configuration) $\boldsymbol{X}$, then we can linearly approximate our pre-shape sphere, allowing us to do nice things that rely on a space being linear (like principal component analysis, a.k.a. PCA, for example). 
 
+
