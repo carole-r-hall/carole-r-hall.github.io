@@ -203,9 +203,12 @@ $$
 \mu = \arg\min_{X\in{S}^{kd-d-1}}\sum_{i=1}^nd^2\left(\boldsymbol{X}, \boldsymbol{X}_i\right)
 $$
 
-This $\mu$ is often called the **Karcher mean** or **Frechet mean**, representing an approximation of what the average configuration in our pre-shape space looks like. We have a lot of letters going on ($k,d,n$), so I'll just remind the reader that:
+This $\mu$ is often called the **Karcher mean** or **Frechet mean**, representing an approximation of what the average configuration in our pre-shape space looks like. We have a lot of letters going on ($k,d,n$), so I'll just remind you that:
 - $k$: number of landmarks we have in _one_ shape
 - $d$: number of coordinates in (or the dimension of) each landmark
-- $n$: the number of shapes we are averaging
+- $n$: the number of shapes over which we are averaging
+
+More explicity, we are taking the average over the set of shapes $\boldsymbol{X}_1, ..., \boldsymbol{X}_n$, where $\boldsymbol{X}_i = \left(x^{(i)}_1, x^{(i)}_2, ... x^{(i)}_k)$ and $x^{(i)}_j = \begin{bmatrix}{c_1\\c_2\\\vdots\\c_d}\end{bmatrix}$.
+
 
 
