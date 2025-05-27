@@ -20,7 +20,11 @@ linkedin_username: "carole-hall-2637b5152"
 #########################################################################################
 include:
   - head-custom.html
+
+header-pages:
   - cv.md
+  - index.md
+  - about.md
 
 theme: "minima"
 
