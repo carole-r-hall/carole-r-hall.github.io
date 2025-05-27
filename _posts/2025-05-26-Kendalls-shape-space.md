@@ -138,4 +138,8 @@ $$
 S^{kd - d - 1}
 $$
 
-which contains centered configurations normalized by size but which still arne't yet invariant to rotation.
+which contains centered configurations normalized by size but which still arne't yet invariant to rotation. **Shape space** is our resulting space once we make our configurations invariant to rotation. 
+
+Before getting to shape spaces, let's take a look at how we can practically remove translation and size variations from our examplar bird shape using Python: 
+
+![Pre-shape centered and scaled](/assets/pre_shape_antarctic_petrel.png)
