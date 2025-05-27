@@ -101,6 +101,9 @@ plt.axis("off")
 plt.show()
 
 ```
+
+Of course, more complex shapes require more boundary points to really represent what we'd expect the shape to look like. We can pretty much tell that these points represent our bird, so let's make our lives easy and just use these few boundary points (or _sample_ points) to represent our shape.
+
 Let's formalize this for the mathematically-inclined (sorry for other readers... but I do blame you for reading a math blog if you don't want to see math). Say we have $k$ landmarks in \(\mathbb{R}^d\), where their coordinates form the configuration matrix:
 
 $$
