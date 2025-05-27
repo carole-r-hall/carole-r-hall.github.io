@@ -69,6 +69,6 @@ plt.title("Antarctic Petrel Outline")
 plt.axis("off")
 plt.show()
 ```
-It doesn't matter if we rotate the outline of our bird, it's still a bird, right? 
+It doesn't matter if we rotate the outline of our bird, it's still a bird (and very importantly, it's still the *same* bird), right? 
 
 ![Rotated Antarctic Petrel Outline](/assets/rotated_antarctic_petrel_outline.png)
