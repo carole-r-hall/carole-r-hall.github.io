@@ -30,7 +30,7 @@ import matplotlib.pyplot as plt
 img = cv2.imread("antarctic_petrel.JPG")
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-# define canny edge detector + other procesing parameters
+# define canny edge detector + other processing parameters
 blur = 15
 canny_low = 13
 canny_high = 59
