@@ -174,10 +174,10 @@ And **Kendall's shape space** is this _quotient space_. Each point in the space 
 
 ### Procrustes
 
-How do we implement this rotational invariance into our Python code, you ask? We need to use something called **Procrustes alignment**&mdash;this is a procedure we use to find the optimal rotation for a (centered and scaled) input shape (_pre-shape_) $\boldsymbol{X}\in\mathbb{R}^{k\times{d}}$ to align well with a (centered and scaled) reference shape $\boldsymbol{Y}\in\mathbb{R}^{k\times{d}}$. That is, we want to find the rotation matrix $R$ such that 
+How do we implement this rotational invariance into our Python code, you ask? We need to use something called **Procrustes alignment**&mdash;this is a procedure we use to find the optimal rotation for a (centered and scaled) input shape (_pre-shape_) $\boldsymbol{X}\in\mathbb{R}^{k\times{d}}$ to align well with a (centered and scaled) reference shape $\boldsymbol{Y}\in\mathbb{R}^{k\times{d}}$. That is, we want to find the rotation matrix $\boldsymbol{R}$ such that 
 
 $$
-\boldsymbol{X}R \approx \boldsymbol{Y}
+\boldsymbol{X}\boldsymbol{R} \approx \boldsymbol{Y}
 $$
 
 So we wish to solve 
@@ -186,7 +186,11 @@ $$
 \min_{R\in{O}_d}\Vert\boldsymbol{X}R - \boldsymbol{Y}\Vert_F^2
 $$
 
+And we have a requirement for $R$ to be _orthogonal_ (i.e., $\boldsymbol{R}^{\intercal}\boldsymbol{R} = \boldsymbol{I}
+
 ![procrustes gif](/assets/procrustes_alignment.gif)
+
+Procrustes alignment 
 
 ### Quick note about landmarks versus shapes
 
@@ -237,5 +241,7 @@ For example, if $d = 2$, then a single landmark $x_j^{(i)}$ is:
 $$
 x_j^{(i)} = \begin{bmatrix}c_1 \\\ c_2 \end{bmatrix} \in \mathbb{R}^2
 $$
+
+
 
 
