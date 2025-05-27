@@ -114,7 +114,7 @@ This collection of coordinates is not yet _invariant_ (meaning _independent of_)
 
 ## Pre-shape space
 
-Kendall suggested isolating a _shape_ by removing translation and scale from consideration. To achieve _translation invariance_, we subtract the centroid from all of our boundary points (also called _landmarks_) $x_1, x_2,...,x_k)$:
+Kendall suggested isolating a _shape_ by removing translation and scale from consideration. To achieve _translation invariance_, we subtract the centroid from all of our boundary points (also called _landmarks_) $\left( x_1, x_2,...,x_k \right)$:
 $$
 \left( x_1, x_2, ..., x_k \right) \rightarrow \left( x_1 - \overline{\boldsymbol{X}}, x_2 - \overline{\boldsymbol{X}},..., x_k - \overline{\boldsymbol{X}} \right) \implies \boldsymbol{X} \rightarrow \boldsymbol{X} - \overline{\boldsymbol{X}}
 $$
