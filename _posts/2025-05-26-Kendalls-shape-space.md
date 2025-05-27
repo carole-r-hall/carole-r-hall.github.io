@@ -186,9 +186,61 @@ $$
 \min_{R\in{O}_d}\Vert\boldsymbol{X}R - \boldsymbol{Y}\Vert_F^2
 $$
 
-And we have a requirement for $R$ to be _orthogonal_ (i.e., $\boldsymbol{R}^{\intercal}\boldsymbol{R} = \boldsymbol{I}
+And we have a requirement for $R$ to be _orthogonal_ (i.e., $\boldsymbol{R}^{\intercal}\boldsymbol{R} = \boldsymbol{I}$). See my other blog post about Procrustes alignment to see how this is all done step by step. For now, I'll just paste in the Python script for how to generate the little gif seen below: 
 
 ![procrustes gif](/assets/procrustes_alignment.gif)
+
+```
+import matplotlib.animation as animation
+from scipy.linalg import svd
+from pathlib import Path
+
+# define a function that creates a rotation for us by some angle theta
+def make_rotation(theta):
+    return np.array([[np.cos(theta), -np.sin(theta)],
+                     [np.sin(theta), np.cos(theta)]])
+
+# apply a known rotation to create a target
+theta = np.pi / 2
+rotated_shape = pre_shape @ make_rotation(theta).T
+
+# compute the procrustes alignment back to original
+A = rotated_shape.T @ pre_shape
+U, _ , Vt = svd(A)
+R_opt = U @ Vt
+
+# interpolate the rotation over time
+n_frames = 30
+interpolated_shapes = [rotated_shape @ make_rotation((1 - a) * theta).T @ R_opt for a in np.linspace(0, 1, n_frames)]
+
+# animation setup
+fig, ax = plt.subplots()
+ax.set_xlim(-1.2, 1.2)
+ax.set_ylim(-1.2, 1.2)
+ax.set_aspect('equal')
+points_plot, = ax.plot([], [], 'o- label = "Aligning shape")
+ref_plot, = ax.plot([], [], 'x--', label = "Reference shape")
+ax.set_axis_off()
+ax.legend()
+
+def init():
+    points_plot.set_data([],[])
+    ref_plot.set_data([],[])
+    return points_plot, ref_plot
+
+def update(frame):
+    shape = interpolated_shapes[frame]
+    points_plot.set_data(shape[:,0], shape[:,1])
+    ref_plot.set_data(pre_shape[:,0], pre_shape[:,1])
+    return points_plot, ref_plot
+
+ani = animation.FuncAnnimation(fig, update, frames=n_frames, init_func=init, blit=True)
+
+# save it as a gif
+gif_path = Path("procrustes_alignment.gif")
+ani.save(gif_path, writer='pillow', fps=10)
+print(f"Saved to {gif_path}")
+```
 
 Procrustes alignment 
 
