@@ -172,6 +172,10 @@ $$
 
 And **Kendall's shape space** is this _quotient space_. Each point in the space represents an equivalence class of configurations differing only by rotation (and therefore the configurations within the same equivalence class are the _same_ shape in this space).
 
+### Quick note about landmarks versus shapes
+
+For people used to coordinates meaning a point in Euclidean space, it can be pretty confusing when we use the term _point_ to refer to a configuration in shape or pre-shape space. In our notation, a point $\boldsymbol{X}\in\Sigma_k^d$ is a configuration of coordinates, so $\boldsymbol{X} = \left(x_1, x_2, ..., x_d)\right)$, where each $x_i$ is the more familiar coordinate. $\boldsymbol{X}$ is very explicitly a $k\times{d}$ matrix, containing $k$ landmarks of dimension $d$. 
+
 ### Geometry of Kendall's shape space
 $\Sigma_k^k$ is a smooth Riemannian manifold. By this, we mean the space looks locally like a Euclidean space (i.e., imagine a smooth surface or some smooth higher-dimensional shape); the smoothness allows us to do calculus on the space (e.g., take derivatives); and it comes with a notion of distance, angles, and curvature, due to a Riemannian **metric** (here, metric means a way we measure distances between points in the space). If you want to learn more about the Riemannian metric (and metrics in general), check out my next blog post. I'll focus for now on relaying some useful info we can keep in mind to apply Kendall's ideas to real data. 
 
@@ -198,5 +202,10 @@ We've established linearity with our tangent space $T_X$ on the pre-shape space 
 $$
 \mu = \arg\min_{X\in{S}^{kd-d-1}}\sum_{i=1}^nd^2\left(\boldsymbol{X}, \boldsymbol{X}_i\right)
 $$
+
+This $\mu$ is often called the **Karcher mean** or **Frechet mean**, representing an approximation of what the average configuration in our pre-shape space looks like. We have a lot of letters going on ($k,d,n$), so I'll just remind the reader that:
+- $k$: number of landmarks we have in _one_ shape
+- $d$: number of coordinates in (or the dimension of) each landmark
+- $n$: the number of shapes we are averaging
 
 
