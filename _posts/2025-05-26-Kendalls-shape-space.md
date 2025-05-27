@@ -131,3 +131,11 @@ Where $\overline{\boldsymbol{X}}$ here is the centroid of the landmarks. Next, w
 $$
 \left\| \boldsymbol{X} \right\|_F = \sqrt{ \sum_{i=1}^k \sum_{j=1}^m x_{ij}^2 }
 $$
+
+After our configuration of landmarks undergoes these transformations, we are left with a resulting **pre-shape**. Pre-shapes are stored in a pre-shape space, a high-dimensional sphere of the form
+
+$$
+S^{kd - d - 1}
+$$
+
+which contains centered configurations normalized by size but which still arne't yet invariant to rotation.
