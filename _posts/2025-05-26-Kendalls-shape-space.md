@@ -164,4 +164,4 @@ $$
 \Sigma_d^k = S^{kd - d - 1} / SO(d)
 $$
 
-And **Kendall's shape space** is this _quotient space_. Each point inb the space represents an equivalence class of configurations differing only by rotation (and therefore are the _same_ shape in this space).  
+And **Kendall's shape space** is this _quotient space_. Each point in the space represents an equivalence class of configurations differing only by rotation (and therefore the configurations within the same equivalence class are the _same_ shape in this space).  
