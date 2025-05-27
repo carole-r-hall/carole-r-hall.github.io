@@ -15,7 +15,7 @@ After Kendall's time in the PDE, he was tenured at Magdalen College in Oxford st
 
 Some of Kendall's most prominent works include his contributions to the understanding of stochastic processes and queueing theory; for example, there is a "Kendall notation" and for queues and the imbedded Markov chain method introduced in his 1953 paper "Stochastic processes occurring in the theory of queues and their analysis by the method of the imbedded Markov chain". The A/S/c (for Arrival/Service/Servers) notation for describing queue types is still referred to as Kendall's notation. Kendall also developed early formal work in random sets, geometric probability, and spatial point processes, applying these concepts to models of river networks, biological shape, and topographic features. Out of this, Kendall became a pioneer in the modeling of spatial randomness, which is now key to geostatistics and ecology. A surprising outcome of Kendall's work was his debunking of some theories about ley lines; in his 1989 paper "Ley lines in question", Kendall showed how alignments of three or more points can arise purely by chance, meaning the appearance of ley lines in geographic data (like monument maps) doesn't inherently imply any meaningful pattern or intention. Now a classic example of mathematical rigor being used to debunk pseudoscientific claims, Kendall proposed quantitative tests for assessing whether alignments are statistically significant or not. I highly recommend reading the biography "David George Kendall" by Sir John Kingman FRS for more information on Kendall's early life and his well known works (see [here](https://royalsocietypublishing.org/doi/10.1098/rsbm.2008.0017)); for now I'll turn the focus to Kendall's contributions to shape analysis. 
 
-## Shape spaces 
+## Kendall's idea of shape spaces 
 I feel a good start to understanding shape in a mathematical way is to start with Kendall's framework (and any of my own personal interest in Kendall's life is mere coincidence...). I find that Kendall's formalization of shapes is intuitive even to the not-mathematically-inclined. We can think of a shape as a form or outline of an object&mdash;try to imagine the outline of a bird (an Antarctic petrel to be exact), for example:
 
 ![Antarctic Petrel](/assets/antarctic_petrel.JPG)
@@ -172,6 +172,8 @@ $$
 
 And **Kendall's shape space** is this _quotient space_. Each point in the space represents an equivalence class of configurations differing only by rotation (and therefore the configurations within the same equivalence class are the _same_ shape in this space).
 
+### Procrustes
+
 How do we implement this rotational invariance into our Python code, you ask? We need to use something called **Procrustes alignment**&mdash;this is a procedure we use to find the optimal rotation for a (centered and scaled) input shape (_pre-shape_) $\boldsymbol{X}\in\mathbb{R}^{k\times{d}}$ to align well with a (centered and scaled) reference shape $\boldsymbol{Y}\in\mathbb{R}^{k\times{d}}$. That is, we want to find the rotation matrix $R$ such that 
 
 $$
@@ -183,6 +185,8 @@ So we wish to solve
 $$
 \min_{R\in{O}_d\Vert\boldsymbol{X}R - \boldsymbol{Y}\Vert_F^2
 $$
+
+[procrustes gif](/assets/procrustes_alignment.gif)
 
 ### Quick note about landmarks versus shapes
 
