@@ -1,5 +1,3 @@
-usemathjax: true
-
 # Kendall's shape space
 
 ## David G. Kendall - the man, the myth, the mathematician
