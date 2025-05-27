@@ -210,7 +210,7 @@ We have a lot of letters going on ($k,d,n$), so I'll just remind you that:
 - $d$: number of coordinates in (or the dimension of) each landmark (for example, 2 for planar shapes, 3 for 3D shapes...)
 - $n$: the number of shapes over which we are averaging
 
-To be explicit, for our non-normalized configurations (i.e., before scaling, translation, or rotation invariance is achieved), each observed configuration $\boldsymbol{X}_i\in\mathbb{R}^{k\times{d}$ contains all $k$ landmarks:
+To be explicit, for our non-normalized configurations (i.e., before scaling, translation, or rotation invariance is achieved), each observed configuration $\boldsymbol{X}_i\in\mathbb{R}^{k\times{d}}$ contains all $k$ landmarks:
 
 $$
 \boldsymbol{X}_i = \begin{bmatrix}x_i^{(i)} \\\ x_2^{(i)} \\\ \vdots \\\ x_k^{(i)}\end{bmatrix}, \hspace{0.25cm} \text{where each } x_j^{(i)}\in\mathbb{R}^d
