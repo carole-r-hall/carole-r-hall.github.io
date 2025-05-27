@@ -203,16 +203,23 @@ $$
 \mu = \arg\min_{X\in{S}^{kd-d-1}}\sum_{i=1}^nd^2\left(\boldsymbol{X}, \boldsymbol{X}_i\right)
 $$
 
-This $\mu$ is often called the **Karcher mean** or **Frechet mean**, representing an approximation of what the average configuration in our pre-shape space looks like. We have a lot of letters going on ($k,d,n$), so I'll just remind you that:
-- $k$: number of landmarks we have in _one_ shape
-- $d$: number of coordinates in (or the dimension of) each landmark
+This $\mu$ is often called the **Karcher mean** or **Frechet mean**, representing an approximation of what the average configuration in our pre-shape space looks like. It's a shape that minimizes the total squared geodesic distance to all of our shapes of interest. 
+
+We have a lot of letters going on ($k,d,n$), so I'll just remind you that:
+- $k$: number of landmarks we have in each shape
+- $d$: number of coordinates in (or the dimension of) each landmark (for example, 2 for planar shapes, 3 for 3D shapes...)
 - $n$: the number of shapes over which we are averaging
 
-More explicity, we are taking the average over the set of shapes $\boldsymbol{X}_1, ..., \boldsymbol{X}_n$, where $\boldsymbol{X}_i = \left(x^{(i)}_1, x^{(i)}_2, ... x^{(i)}_k\right)$ and 
+To be explicit, for our non-normalized configurations (i.e., before scaling, translation, or rotation invariance is achieved), each observed configuration $\boldsymbol{X}_i\in\mathbb{R}^{k\times{d}$ contains all $k$ landmarks:
 
 $$
-x^{(i)}_j = \begin{bmatrix}c_1\\\c_2\\\ \vdots \\\c_d\end{bmatrix}
+\boldsymbol{X}_i = \begin{bmatrix}x_i^{(i)} \\\ x_2^{(i)} \\\ \vdots \\\ x_k^{(i)}\end{bmatrix}, \hspace{0.25cm} \text{where each } x_j^{(i)}\in\mathbb{R}^d
 $$
 
+For example, if $d = 2$, then a single landmark $x_j^{(i)}$ is:
+
+$$
+x_j^{(i)} = \begin{bmatrix}c_1 \\\ c_2 \end{bmatrix} \in \mathbb{R}^2
+$$
 
 
