@@ -81,4 +81,9 @@ You'll find in my blog some different perspectives on what makes a shape a _shap
 - Bones in a skull
 - Boundary nest locations in a colony of birds
 
+For example, on our bird shape: 
+
+![Simplified boundary points](/assets/simplified_antarctic_petrel_contour_points.png)
+
+
 
