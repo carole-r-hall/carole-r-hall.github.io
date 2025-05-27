@@ -85,5 +85,23 @@ For example, on our bird shape:
 
 ![Simplified boundary points](/assets/simplified_antarctic_petrel_contour_points.png)
 
+(if you're interested in the code to find these points, see below for simplifying the contour): 
+
+```
+largest_contour = max(contours, key=cv2.contourArea)
+
+points = simplified.reshape(-1, 2)
+
+x, y = points[:, 0], points[:, 1]
+plt.scatter(x, y, color='black')
+plt.gca().invert_yaxis() 
+plt.title("Simplified Contour Points")
+plt.axis("equal")
+plt.axis("off")
+plt.show()
+
+```
+
+
 
 
