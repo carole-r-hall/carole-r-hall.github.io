@@ -110,5 +110,17 @@ $$
 \boldsymbol{X} = \left[x_1, x_2, ..., x_k\right]^{\intercal} \in \mathbb{R}^{k\times{d}}
 $$
 
+This collection of coordinates is not yet _invariant_ (meaning _independent of_) rotation, scaling, or translation (location). If we were to shift all coordinates by some amount to the right, it would undeniably be a different set of coordinates. I.e., $x_1 + 5 \neq x_1$. Let's get into Kendall's proposal of a **pre-shape space**. 
 
+## Pre-shape space
 
+Kendall suggested isolating a _shape_ by removing translation and scale from consideration. To achieve _translation invariance_, we subtract the centroid from all of our boundary points (also called _landmarks_) $x_1, x_2,\hdots,x_k)$:
+$$
+\left(x_1, x_2, \hdots, x_k\right) \rightarrow \left(x_1 - \overline{\boldsymbol{X}}, x_2 - \overline{\boldsymbol{X}}, \hdots, x_k - \overline{\boldsymbol{X}}) \implies \boldsymbol{X} \rightarrow \boldsymbol{X} - \overline{\boldsymbol{X}}
+$$
+
+Where $\overline{\boldsymbol{X}}$ here is the centroid of the landmarks. Next, we achieve _scale invariance_ by forcing our configuration to have a unit size; we use the Frobenius norm $\|\boldsymbok{X}\|_F$ to do this:
+
+$$
+\|\boldsymbol{X}\|_F = \sqrt{\sum_{i=1}^{k}\sum_{j=1}^{m}x_{ij}} = \sqrt{\text{trace}\left(X^{\intercal}X\right)}
+$$
