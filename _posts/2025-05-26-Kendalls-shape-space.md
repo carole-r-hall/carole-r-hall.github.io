@@ -141,7 +141,7 @@ $$
 which contains centered configurations normalized by size but which still arne't yet invariant to rotation. **Shape space** is our resulting space once we make our configurations invariant to rotation. We can introduce some more math mumbo jumbo and say
 
 $$
-\boldsymbol{S}^{kd-d-1} = \{ \boldsymbol{X} \in \mathbb{R}_0^{k\times{d}} \mid \|\boldsymbol{X}\|_F = 1\}
+\boldsymbol{S}^{kd-d-1} = \left{ \boldsymbol{X} \in \mathbb{R}_0^{k\times{d}} \mid \|\boldsymbol{X}\|_F = 1 \right}
 $$
 
 Where $\mathbb{R}_0^{k\times{d}}$ is the space of centered configurations (i.e., those with zero mean). We can call the pre-shape space a unit sphere embedded in the linear space of centered configurations. 
