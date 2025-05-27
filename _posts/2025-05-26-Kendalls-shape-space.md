@@ -211,7 +211,7 @@ This $\mu$ is often called the **Karcher mean** or **Frechet mean**, representin
 More explicity, we are taking the average over the set of shapes $\boldsymbol{X}_1, ..., \boldsymbol{X}_n$, where $\boldsymbol{X}_i = \left(x^{(i)}_1, x^{(i)}_2, ... x^{(i)}_k\right)$ and 
 
 $$
-x^{(i)}_j = \begin{bmatrix}c_1\\c_2\\\vdots\\c_d\end{bmatrix}
+x^{(i)}_j = \begin{bmatrix}c_1\\c_2\\\...\\c_d\end{bmatrix}
 $$
 
 
