@@ -186,7 +186,7 @@ Specifically, this gives a vector in $T_X$ pointing toward $\boldsymbol{Y}$.
 And conversely, the **exponential map** gives us a way to map from the tangent space back to the pre-shape manifold: 
 
 $$
-\exp_X(\boldsymbol{V}) = \cos\left(\|\boldsymbol{V}\|)\boldsymbol{X} + \sin\left(\|\boldsymbol{V}\|\right)\frac{\boldsymbol{V}}{\|\boldsymbol{V}\|}
+\exp_X(\boldsymbol{V}) = \cos\left(\|\boldsymbol{V}\|\right)\boldsymbol{X} + \sin\left(\|\boldsymbol{V}\|\right)\frac{\boldsymbol{V}}{\|\boldsymbol{V}\|}
 $$
 
 And this maps a vector $\boldsymbol{V}\in T_X$ back to our manifold or pre-shape space. 
