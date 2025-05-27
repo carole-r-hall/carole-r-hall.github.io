@@ -20,6 +20,9 @@ linkedin_username: "carole-hall-2637b5152"
 #########################################################################################
 theme: "minima"
 
+ # Build settings
+markdown: kramdown
+
 rss: rss
 
 kramdown:
