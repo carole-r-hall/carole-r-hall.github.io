@@ -138,7 +138,7 @@ $$
 S^{kd - d - 1}
 $$
 
-which contains centered configurations normalized by size but which still arne't yet invariant to rotation. **Shape space** is our resulting space once we make our configurations invariant to rotation. We can introduce some more math mumbo jumbo and say
+which contains centered configurations normalized by size but which still aren't yet invariant to rotation. **Shape space** is our resulting space once we make our configurations invariant to rotation. We can introduce some more math mumbo jumbo and say
 
 $$
 S^{kd-d-1} = \left\{ \boldsymbol{X} \in \mathbb{R}_0^{k\times{d}} \mid \Vert\boldsymbol{X}\Vert_F = 1 \right\}
