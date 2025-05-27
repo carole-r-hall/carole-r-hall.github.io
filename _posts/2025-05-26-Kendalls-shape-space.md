@@ -119,7 +119,7 @@ $$
 \left(x_1, x_2, \hdots, x_k\right) \rightarrow \left(x_1 - \overline{\boldsymbol{X}}, x_2 - \overline{\boldsymbol{X}}, \hdots, x_k - \overline{\boldsymbol{X}}) \implies \boldsymbol{X} \rightarrow \boldsymbol{X} - \overline{\boldsymbol{X}}
 $$
 
-Where $\overline{\boldsymbol{X}}$ here is the centroid of the landmarks. Next, we achieve _scale invariance_ by forcing our configuration to have a unit size; we use the Frobenius norm $\|\boldsymbok{X}\|_F$ to do this:
+Where $\overline{\boldsymbol{X}}$ here is the centroid of the landmarks. Next, we achieve _scale invariance_ by forcing our configuration to have a unit size; we use the Frobenius norm $\|\boldsymbol{X}\|_F$ to do this:
 
 $$
 \|\boldsymbol{X}\|_F = \sqrt{\sum_{i=1}^{k}\sum_{j=1}^{m}x_{ij}} = \sqrt{\text{trace}\left(X^{\intercal}X\right)}
