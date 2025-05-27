@@ -112,7 +112,7 @@ Of course, more complex shapes require more boundary points to really represent 
 Let's formalize this for the mathematically-inclined (sorry for other readers... but I do blame you for reading a math blog if you don't want to see math). Say we have $k$ landmarks in $\mathbb{R}^d$, where their coordinates form the configuration matrix:
 
 $$
-\boldsymbol{X} = \left\[x_1, x_2, ..., x_k\right\]^{\intercal} \in \mathbb{R}^{k\times{d}}.
+\boldsymbol{X} = \lbrack x_1, x_2, ..., x_k \rbrack^{\intercal} \in \mathbb{R}^{k\times{d}}.
 $$
 
 This collection of coordinates is not yet _invariant_ (meaning _independent of_) rotation, scaling, or translation (location). If we were to shift all coordinates by some amount to the right, it would undeniably be a different set of coordinates. I.e., $x_1 + 5 \neq x_1$. Let's get into Kendall's proposal of a **pre-shape space**. 
