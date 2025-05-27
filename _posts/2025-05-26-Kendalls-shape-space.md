@@ -152,4 +152,6 @@ fro_norm = np.linalg.norm(centered)
 pre_shape = centered / fro_norm
 ```
 
+and when we re-plot these points, we should get a shape that looks the same:
+
 ![Pre-shape centered and scaled](/assets/pre_shape_antarctic_petrel.png)
