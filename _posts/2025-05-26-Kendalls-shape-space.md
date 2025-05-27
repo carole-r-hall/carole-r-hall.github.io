@@ -123,6 +123,6 @@ $$
 Where $\overline{\boldsymbol{X}}$ here is the centroid of the landmarks. Next, we achieve _scale invariance_ by forcing our configuration to have a unit size; we use the Frobenius norm $\|\boldsymbol{X}\|_F$ to do this:
 
 
-$$
-    ||\boldsymbol{X}||_F = \sqrt{ \sum_{i=1}^k \sum_{j=1}^m x_{ij}^2 } = \sqrt{ \text{trace} \left( X^{\intercal} X \right) }
-$$
+<script type="math/tex; mode=display">
+\left\| \boldsymbol{X} \right\|_F = \sqrt{ \sum_{i=1}^k \sum_{j=1}^m x_{ij}^2 }
+</script>
