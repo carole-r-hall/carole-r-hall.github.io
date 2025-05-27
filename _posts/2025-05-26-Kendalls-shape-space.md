@@ -127,5 +127,5 @@ Where $\overline{\boldsymbol{X}}$ here is the centroid of the landmarks. Next, w
 
 
 $$
-\left\| \boldsymbol{X} \right\|_F = \sqrt{ \sum_{i=1}^k \sum_{j=1}^m x_{ij}^2 } = \sqrt{ \text{trace} \left( X^{\intercal} X \right) }
+\| \boldsymbol{X} \|_F = \sqrt{ \sum_{i=1}^k \sum_{j=1}^m x_{ij}^2 } = \sqrt{ \text{trace} \left( X^{\intercal} X \right) }
 $$
