@@ -213,7 +213,7 @@ And this maps a vector $\boldsymbol{V}\in T_X$ back to our manifold or pre-shape
 
 ## Statistics in shape space
 
-We've established linearity with our tangent space $T_X$ on the pre-shape space $S^{kd-d-1}; let's define a meaningful notion of the **mean** of all of our pre-shape configurations $\boldsymbol{X}_1, ..., \boldsymbol{X}_n$: 
+We've established linearity with our tangent space $T_X$ on the pre-shape space $S^{kd-d-1}$; let's define a meaningful notion of the **mean** of all of our pre-shape configurations $\boldsymbol{X}_1, ..., \boldsymbol{X}_n$: 
 
 $$
 \mu = \arg\min_{X\in{S}^{kd-d-1}}\sum_{i=1}^nd^2\left(\boldsymbol{X}, \boldsymbol{X}_i\right)
