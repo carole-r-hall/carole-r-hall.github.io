@@ -101,7 +101,8 @@ plt.axis("off")
 plt.show()
 
 ```
-
+Let's formalize this for the mathematically-inclined (sorry for other readers... but I do blame you for reading a math blog if you don't want to see math). Say we have $k$ landmarks in $\mathbb{R}^d$, where their coordinates form the configuration matrix:
+$$X = \left[x_1, x_2, ..., x_k\right]^{\intercal} \in \mathbb{R}^{k\times{d}}$$
 
 
 
