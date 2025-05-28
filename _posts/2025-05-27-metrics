@@ -1,0 +1,10 @@
+---
+layout: default
+title: Metric spaces
+---
+
+When we first learn about geometry, we learn how to measure the distance between two points on the plane; draw a line between the two points, and measure the length of that line. However, when you're no longer on a nice, flat plane, what happens? 
+
+![linear manifold](/assets/linear_manifold_example.png)
+
+![nonlinear manifold](/assets/nonlinear_manifold_example.png)
