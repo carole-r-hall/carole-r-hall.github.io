@@ -12,7 +12,7 @@ $$
 X \approx FL^{\intercal} + \epsilon
 $$
 
-where $F\in\mathbb{R}^{n\times{k}}$ are the factor scores or latent variables, $L\in\mathbb{R}^{p\times{k}} are the factor loadings (i.e., how much a given variable is related to a latent variable), and $\epsilon$ are the residuals (also known as error or noise). Factor analysis, interestingly, is heavily used in psychology, often being used to determine things like intelligence or personality traits from questionnaires or test data. Specifically, this arises due to _rotational indeterminacy_ or solutions not being uniquely determined in factor loading matrices; i.e., 
+where $F\in\mathbb{R}^{n\times{k}}$ are the factor scores or latent variables, $L\in\mathbb{R}^{p\times{k}}$ are the factor loadings (i.e., how much a given variable is related to a latent variable), and $\epsilon$ are the residuals (also known as error or noise). Factor analysis, interestingly, is heavily used in psychology, often being used to determine things like intelligence or personality traits from questionnaires or test data. Specifically, this arises due to _rotational indeterminacy_ or solutions not being uniquely determined in factor loading matrices; i.e., 
 
 $$
 X \approx FL^{\intercal} \implies X \approx (FR^{\intercal})(LR^{\intercal})^{\intercal} = F'L'^{\intercal}
