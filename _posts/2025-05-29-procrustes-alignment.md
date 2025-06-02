@@ -12,7 +12,19 @@ $$
 X \approx FL^{\incal} + \epsilon
 $$
 
-where $F\in\mathbb{R}^{n\times{k}}$ are the factor scores or latent variables, $L\in\mathbb{R}^{p\times{k}} are the factor loadings (i.e., how much a given variable is related to a latent variable), and $\epsilon$ are the residuals (also known as error or noise). Factor analysis, interestingly, is heavily used in psychology, often being used to determine things like intelligence or personality traits from questionnaire or test data. Maybe I should write more on some of my favorite methods popping up in psychology in a dedicated blog post...
+where $F\in\mathbb{R}^{n\times{k}}$ are the factor scores or latent variables, $L\in\mathbb{R}^{p\times{k}} are the factor loadings (i.e., how much a given variable is related to a latent variable), and $\epsilon$ are the residuals (also known as error or noise). Factor analysis, interestingly, is heavily used in psychology, often being used to determine things like intelligence or personality traits from questionnaires or test data. Specifically, this arises due to _rotational indeterminacy_ or solutions not being uniquely determined in factor loading matrices; i.e., 
 
-Anyway, back to Procrustes. Procrustes analysis is a geometric method used to compare two configurations of points, often used to align sets of landmarks by finding the ideal rotation transformation to match one configuration to the other. 
+$$
+X \approx FL^{\incal} \implies X \approx (FR^{\incal})(LR^{\incal})^{\incal} = F'L'^{\incal}
+$$
+
+where $R\in\mathbb{R}^{k\times{k}}$ is an orthogonal matrix. Let's run through a small example. Let's say we have a longitudinal study on personality development between year 1 (point A) and year 5 (point B), and we want to know whether the underlying latent traits (in a psychology study this might be something like Neuroticism) remain similar over the study's time period. However, factor analysis doesn't care about rotation, so the loading matrices from year 1, $L_1$, and year 2, $L_2$, are arbitrarily ordered/oriented. Even if the psychological structure we care about is stable through time, the matrices may look different just because of rotational indeterminacy. For example, in year 1, question 1 of the study may have the loadings (0.85, 0.10, 0.00), while in year 5, these loadings may be (0.05, 0.87, 0.02). These loadings are similar, just in different orders. Procrustes helps solve this problem and make the loading comparison meaningful. 
+
+Anyway, back to Procrustes. Procrustes analysis is a geometric method used to compare two configurations of points, often used to align sets of landmarks by finding the ideal rotation transformation to match one configuration to the other. We solve the orthogonal procsustes problem, which is presented as:
+
+$$
+\min_{R\in{O}(k)}\VertAR - B\Vert_F
+$$
+
+Here, we're attemptping to align matrices $A$ and $B$ of comparable shapes. 
 
