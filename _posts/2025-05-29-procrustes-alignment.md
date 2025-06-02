@@ -23,7 +23,7 @@ where $R\in\mathbb{R}^{k\times{k}}$ is an orthogonal matrix. Let's run through a
 Anyway, back to Procrustes. Procrustes analysis is a geometric method used to compare two configurations of points, often used to align sets of landmarks by finding the ideal rotation transformation to match one configuration to the other. We solve the orthogonal procsustes problem, which is presented as:
 
 $$
-\min_{R\in{O}(k)}\VertAR - B\Vert_F
+\min_{R\in{O}(k)}\Vert AR - B\Vert_F
 $$
 
 Here, we're attemptping to align matrices $A$ and $B$ of comparable shapes. 
