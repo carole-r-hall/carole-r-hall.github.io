@@ -26,5 +26,7 @@ $$
 \min_{R\in{O}(k)}\Vert AR - B\Vert_F
 $$
 
-Here, we're attemptping to align matrices $A$ and $B$ of comparable shapes. 
+Here, we're attempting to align matrices $A$ and $B$ of comparable shapes. 
+
+[to be continuedd :-)]
 
